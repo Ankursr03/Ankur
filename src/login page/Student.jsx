@@ -1,46 +1,53 @@
 import React, { useState } from "react";
-//import { useNavigate } from "react-router-dom";
 
-function Student() {
-    const [stuId, setStuId] = useState("");
-    const [pass, setPass] = useState("");
-   // const history = useNavigate();
 
-    function handleIdChange(event) {
-        setStuId(event.target.value);
-    }
+function Admin() {
+  const [AdId, setAdId] = useState("");
+  const [pass, setPass] = useState("");
+  const [selectedUserType, setSelectedUserType] = useState("Student");
 
-    function handlePassChange(event) {
-        let len = event.target.value.length;
-        setPass("•".repeat(len));
-    }
+  function handleIdChange(event) {
+    setAdId(event.target.value);
+  }
 
-    function handleClick(event) {
-        const userType = event.target.textContent.toLowerCase();
-     //   history(`/login/${userType}`);
-    }
+  function handlePassChange(event) {
+    let len = event.target.value.length;
+    setPass("•".repeat(len));
+  }
 
-    return (
-        <>
-            <div className="Menu">
-                <button onClick={handleClick}>Student</button>
-                <button onClick={handleClick}>Faculty</button>
-                <button onClick={handleClick}>Admin</button>
-                <button onClick={handleClick}>Worker</button>
-            </div>
+  function handleUserTypeChange(event) {
+    setSelectedUserType(event.target.value);
+  }
 
-            <div className="stu-login">
-                <h1>LOGIN</h1>
-                <div className="inputs">
-                    <label>USERNAME:</label>
-                    <input type="text" value={stuId} onChange={handleIdChange} placeholder="Enter Roll NO." id="username" /><br />
-                    <label>PASSWORD:</label>
-                    <input type="password" value={pass} onChange={handlePassChange} placeholder="••••••••" id="password" />
-                </div>
-                <button>LOGIN</button>
-            </div>
-        </>
-    );
+  function handleLogin() {
+    // handle login based on selectedUserType
+  }
+
+  return (
+    <div className="background-template">
+      <div className="admin-container">
+        <div className="user-type-dropdown">
+          <select value={selectedUserType} onChange={handleUserTypeChange}>
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty</option>
+            <option value="Admin">Admin</option>
+            <option value="Worker">Worker</option>
+          </select>
+        </div>
+
+        <div className="fac-login">
+          <h1>LOGIN</h1>
+          <div className="inputs">
+            <label htmlFor="username">USERNAME:</label>
+            <input type="text" value={AdId} onChange={handleIdChange} placeholder="Enter Id" id="username"/><br />
+            <label htmlFor="password">PASSWORD:</label>
+            <input type="password" value={pass} onChange={handlePassChange} placeholder="••••••••" id="password"/>
+          </div>
+          <button onClick={handleLogin}>LOGIN</button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Student;
+export default Admin;

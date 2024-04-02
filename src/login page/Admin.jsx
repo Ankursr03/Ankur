@@ -22,10 +22,8 @@ function Admin(){
 
     return(<>
     <div className="Menu">
-        <button onClick={handleClick} value={Student}>Student</button>
-        <button onClick={handleClick} value={Faculty}>Faculty</button>
-        <button onClick={handleClick} value={Admin}>Admin</button>
-        <button onClick={handleClick} value={Worker}>Worker</button>
+        
+        
     </div>
     
     
@@ -33,6 +31,7 @@ function Admin(){
         <h1>LOGIN</h1>
         <div className="inputs">
             <label >USERNAME:</label>
+            <label >Id:</label>
             <input type="text" value={AdId} onChange={handleIdChange} placeholder="Enter Id" id="username"/><br />
             <label >PASSWORD:</label>
             <input type="text" value={pass} onChange={handlePassChange} placeholder="••••••••" id="password"/>

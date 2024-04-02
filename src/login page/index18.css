@@ -1,49 +1,70 @@
-body{
-    box-sizing: border-box;
-    text-align: center;
+.background-template {
+    background-image: url("bh.jpg"); /* Replace with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
-     
-}
+  }
 
-.menu{
-    display: inline-block;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-
-.stu-login{
-    display: inline-block;
-    text-align: center;
+.admin-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    padding-top: 50px;
-    border: 10px solid;
-    height: 300px;
-    width: 400px;
-    margin-left: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 5px 5px 5px rgb(51, 50, 50);
-
-}
-.inputs{
-
-    padding: 10px;
-    margin: 10px;
-    border: 10px ;
-    border-radius: 50px;
-}
-
-#username{
-    padding: 10px;
+    height: 100vh;
+  }
+  
+  .user-type-dropdown {
     margin-bottom: 20px;
-}
-
-#password{
+  }
+  
+  .user-type-dropdown select {
     padding: 10px;
-}
-button{
-    width: 70px;
-    height: 50px;
-}    
+    font-size: 16px;
+  }
+  
+  .fac-login {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .fac-login h1 {
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .inputs {
+    margin-bottom: 20px;
+  }
+  
+  .inputs label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .inputs input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
