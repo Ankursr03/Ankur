@@ -1,5 +1,4 @@
 .background-template {
-    background-image: url("bh.jpg"); /* Replace with the path to your background image */
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -27,7 +26,7 @@
   
   .fac-login {
     padding: 20px;
-    border: 2px solid black;
+    border: 0px solid black;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
